@@ -1,8 +1,20 @@
-import React from 'react'
+import React from 'react';
+import Article from 'Article';
+import Aside from 'Aside';
+import Banner from 'Banner';
+import Features from 'Features';
+import Section from 'Section';
+
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <Section/>
+      <Banner/>
+      <Features/>
+      <Article/>
+      <Aside/>
+    </>
   )
 }
 
