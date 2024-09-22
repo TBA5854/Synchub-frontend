@@ -9,7 +9,8 @@
   }
 
   body {
-    background-color: rgb(18, 19, 18);
+    background-color: rgb(16, 6, 47);
     color: white;
+    margin-bottom: 0.2rem;
   }
 }
