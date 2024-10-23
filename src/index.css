@@ -11,6 +11,6 @@
   body {
     background-color: rgb(16, 6, 47);
     color: white;
-    margin-bottom: 0.2rem;
+    scroll-behavior: smooth;
   }
 }
