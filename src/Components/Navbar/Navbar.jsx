@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='w-full h-[10vh] flex flex-row justify-between items-center content-center text-base p-3 md:px-8 md:py-12 text-white lg:text-xl'>
+      <div className='w-full h-[10vh] flex flex-row justify-between items-center content-center text-base p-3 md:px-8 md:py-12 text-white lg:text-xl bg-transparent absolute'>
 
         {/* left - menu */}
         <div>

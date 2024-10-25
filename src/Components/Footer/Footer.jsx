@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-white px-2 py-6 md:py-20 text-black flex justify-start md:justify-center gap-3 md:gap-8">
+      <footer className="bg-white px-2 py-6 md:py-20 text-black flex justify-start md:justify-center gap-3 md:gap-8 ">
         {/* logo  */}
         <div>
           <img src={logo} alt="logo img" />
@@ -15,7 +15,7 @@ const Footer = () => {
           <div>
             <h2 className="text-3xl lg:text-6xl font-semibold"><Link to="/" onClick={() => window.scrollTo(0, 0)}>SyncHub</Link></h2>
           </div>
-          <div className="flex md:text-xl justify-between flex-wrap py-6 gap-3 md:gap-0">
+          <div className="flex md:text-xl md:justify-between flex-wrap py-6 gap-6 md:gap-0">
             {/* Contact List */}
             <ul>
               <li>
@@ -26,6 +26,7 @@ const Footer = () => {
               <li>General Inquiries</li>
               <li>teamsync@gmail.com</li>
             </ul>
+             
             {/* Terms & Conditions List */}
             <ul>
               <li>
@@ -43,6 +44,7 @@ const Footer = () => {
               <li>FAQs</li>
               <li>Collections</li>
             </ul>
+      
           </div>
         </div>
       </footer>
