@@ -6,6 +6,9 @@ import Home from './Pages/Home/Home'
 import About from './Pages/About/About'
 import Teams from './Pages/Teams/Teams'
 import Hackathons from './Pages/Hackathons/Hackathons'
+import Login from './Pages/Authentication/Login'
+import Signup from './Pages/Authentication/Signup'
+
 
 const router=createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +19,8 @@ const router=createBrowserRouter(
       <Route path="teams" element={<Teams/>}/>
       <Route path="hackathons" element={<Hackathons/>}/>
     </Route>
+    <Route path="/login" element={<Login/>}/>
+    <Route path="/signup" element={<Signup/>}/>
     </>
   )
 );
