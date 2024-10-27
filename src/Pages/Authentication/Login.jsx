@@ -18,7 +18,7 @@ const Login = () => {
     console.log(username, password);
   };
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center gap-10 text-lg pt-52 lg:pt-0">
+    <div className="w-full min-h-screen flex flex-col justify-center items-center gap-10 text-lg">
 
       {/* logo */}
       <div>
