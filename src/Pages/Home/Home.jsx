@@ -1,6 +1,7 @@
 import React from "react";
 import invite from "../../assets/images/invite.png";
 import coding from "../../assets/images/coding.png";
+import person from "../../assets/images/person.png";
 import { StretchHorizontal, Trophy, Users, Video } from "lucide-react";
 
 const cardData = [
@@ -51,7 +52,6 @@ const Home = () => {
         <div className='min-h-[50vh] min-w-full bg-[url("/images/lightBgmob.png")] md:bg-[url("/images/lightBg.png")] bg-contain bg-no-repeat mt-12 pt-4 md:pt-12'>
           <h3 className="text-2xl md:text-4xl">LIGHT UP YOUR CODE</h3>
           <div className="flex flex-col lg:flex-row justify-center pt-4 md:pt-20">
-            
             {/* text area  */}
             <div className="flex flex-col justify-between lg:px-24 ">
               <div className="text-left p-2 md:p-0">
@@ -69,7 +69,7 @@ const Home = () => {
                 {cardData.map((card, index) => (
                   <div
                     key={index}
-                    className="flex-grow flex flex-col items-center gap-4 text-center p-8 hover:bg-slate-600 rounded-3xl"
+                    className="flex-grow flex flex-col items-center gap-4 text-center p-8 hover:bg-slate-600 rounded-3xl text-xl"
                   >
                     <span>{card.icon}</span>
                     <span>{card.title}</span>
@@ -83,6 +83,41 @@ const Home = () => {
               <img src={coding} alt="coding image" />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* hackathon section  */}
+      <section className="w-full flex flex-row flex-wrap-reverse justify-evenly items-center md:py-10 gap-20 md:gap-0">
+
+        {/* left side  */}
+        <div className="text-center border-2 border-purple-900 py-12 px-2 md:p-12 relative">
+          <div className="relative bottom-20">
+            <img src={person} alt="person image"/>
+          </div>
+          <div className="text-2xl font-medium md:text-4xl pb-4">Ready to excel in
+            <div>Hack?</div>
+          </div>
+          <span className="text-gray-400">You are just one click away</span>
+          <div className="text-xl p-4 flex flex-row justify-center gap-6">
+            <button className="bg-[rgb(117,60,234)] py-1 px-6 rounded-3xl">
+              Participate
+            </button>
+            <button className="text-[rgb(117,60,234)] border-2 border-[rgb(117,60,234)] py-1 px-10 rounded-3xl">
+              Judge
+            </button>
+          </div>
+        </div>
+
+        {/* right side  */}
+        <div className="md:w-[30vw] text-center">
+          <h3 className="text-3xl md:text-5xl font-bold leading-normal pb-6">
+            AI Powered <span className="text-cyan-400">Hackathons</span>
+          </h3>
+          <span>
+            AI Powered hackathons allow users to work on hackathons with
+            students of different cities with our cutting age technologies and
+            features .
+          </span>
         </div>
       </section>
     </div>
