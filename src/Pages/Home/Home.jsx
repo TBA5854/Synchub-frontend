@@ -18,53 +18,53 @@ import video4 from "../../assets/images/video4.jpg";
 import video5 from "../../assets/images/video5.jpg";
 import { StretchHorizontal, Trophy, Users, Video } from "lucide-react";
 
-const cardData = [
-  {
-    icon: <Video />,
-    title: "Live video calls",
-  },
-  {
-    icon: <Trophy />,
-    title: "Leaderboard",
-  },
-  {
-    icon: <StretchHorizontal />,
-    title: "Code with your teammates",
-  },
-  {
-    icon: <Users />,
-    title: "Live AI suggestions",
-  },
-];
-
-const sections = [
-  {
-    title: "COLLABORATE",
-    text: "Want to collaborate on meaningful projects and make a difference with real-time translation and AI summary.",
-    img: collabrate,
-  },
-  {
-    title: "SUCCEED",
-    text: "Secure your spot on the leaderboard and get a chance to win rewards.",
-    img: succed,
-  },
-  {
-    title: "INNOVATE",
-    text: "Be a part of the growing community to enhance your skills and connections.",
-    img: innovate,
-  },
-];
-
-const [activeIndex, setActiveIndex] = useState(0);
-
-useEffect(() => {
-  const interval = setInterval(() => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % sections.length);
-  }, 5000);
-  return () => clearInterval(interval);
-}, [sections.length]);
-
 const Home = () => {
+  const cardData = [
+    {
+      icon: <Video />,
+      title: "Live video calls",
+    },
+    {
+      icon: <Trophy />,
+      title: "Leaderboard",
+    },
+    {
+      icon: <StretchHorizontal />,
+      title: "Code with your teammates",
+    },
+    {
+      icon: <Users />,
+      title: "Live AI suggestions",
+    },
+  ];
+
+  const sections = [
+    {
+      title: "COLLABORATE",
+      text: "Want to collaborate on meaningful projects and make a difference with real-time translation and AI summary.",
+      img: collabrate,
+    },
+    {
+      title: "SUCCEED",
+      text: "Secure your spot on the leaderboard and get a chance to win rewards.",
+      img: succed,
+    },
+    {
+      title: "INNOVATE",
+      text: "Be a part of the growing community to enhance your skills and connections.",
+      img: innovate,
+    },
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % sections.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [sections.length]);
+
   return (
     <div className="flex flex-col justify-center items-center">
       {/* hero section  */}
@@ -163,18 +163,18 @@ const Home = () => {
       </section>
 
       <section>
-        <div class="content-header">
+        <div className="content-header">
           <h2>Create a content that</h2>
           <h3>INSPIRES</h3>
           <p>&gt;&gt;</p>
         </div>
 
-        <div class="video-container">
-          <img class="video small" src={video1}></img>
-          <img class="video small" src={video2}></img>
-          <img class="video full" src={video3}></img>
-          <img class="video small" src={video4}></img>
-          <img class="video small" src={video5.jpg}></img>
+        <div className="video-container">
+          <img className="video small" src={video1}></img>
+          <img className="video small" src={video2}></img>
+          <img className="video full" src={video3}></img>
+          <img className="video small" src={video4}></img>
+          <img className="video small" src={video5.jpg}></img>
         </div>
       </section>
 
@@ -255,9 +255,9 @@ const Home = () => {
       </section>
 
       <section>
-        <div class="waitlist-container">
+        <div className="waitlist-container">
           <h2>Join Our Waitlist</h2>
-          <div class="input-container">
+          <div className="input-container">
             <input type="email" placeholder="Enter your mail address" />
             <button type="submit">Submit</button>
           </div>
