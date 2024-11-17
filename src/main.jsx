@@ -8,6 +8,7 @@ import Teams from './Pages/Teams/Teams'
 import Hackathons from './Pages/Hackathons/Hackathons'
 import Login from './Pages/Authentication/Login'
 import Signup from './Pages/Authentication/Signup'
+import Error from './Pages/Error404/Error'
 
 
 const router=createBrowserRouter(
@@ -21,6 +22,7 @@ const router=createBrowserRouter(
     </Route>
     <Route path="/login" element={<Login/>}/>
     <Route path="/signup" element={<Signup/>}/>
+    <Route path="*" element={<Error/>}/>
     </>
   )
 );

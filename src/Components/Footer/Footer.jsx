@@ -1,50 +1,93 @@
 import React from "react";
-import logo from "../../../public/logo.png";
 import { Link } from "react-router-dom";
+const logo = "./logo.png";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-white px-2 py-6 md:py-20 text-black flex justify-start md:justify-center gap-3 md:gap-8 ">
-        {/* logo  */}
-        <div>
+      <footer className="bg-white text-black flex flex-col items-center gap-8 py-24">
+        {/*upper- logo+name  */}
+        <div className="flex flex-row justify-center items-center gap-10">
           <img src={logo} alt="logo img" />
+          <h2 className="text-6xl font-semibold">
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+              SyncHub
+            </Link>
+          </h2>
         </div>
 
-        {/* content  */}
-        <div className="flex flex-col justify-start lg:gap-3 min-h-72 lg:w-[60vw]">
-          <div>
-            <h2 className="text-3xl lg:text-6xl font-semibold"><Link to="/" onClick={() => window.scrollTo(0, 0)}>SyncHub</Link></h2>
-          </div>
-          <div className="flex md:text-xl md:justify-between flex-wrap py-6 gap-6 md:gap-0">
+        {/*lower- content  */}
+        <div className="w-full flex flex-row md:text-xl flex-wrap py-6 gap-8 md:flex-nowrap md:gap-0">
+          <div className="w-full flex flex-row justify-around">
             {/* Contact List */}
-            <ul>
-              <li>
-                <h3 className="text-xl md:text-2xl font-semibold py-6">Contact</h3>
+            <ul className="flex flex-col gap-6 text-gray-600 justify-evenly">
+              <li className="text-2xl md:text-2xl font-semibold text-black">
+                Contact
               </li>
-              <li>VIT Vellore</li>
-              <li>632014</li>
+              <li>
+                VIT Vellore <div>632014</div>
+              </li>
               <li>General Inquiries</li>
               <li>teamsync@gmail.com</li>
-            </ul>
-             
-            {/* Terms & Conditions List */}
-            <ul>
               <li>
-                <h3 className="text-xl md:text-2xl font-semibold py-6">Terms & Conditions</h3>
+                <span className="font-semibold text-black">Phone: </span>9117203884
               </li>
-              <li>Privacy Policy</li>
-              <li>Follow</li>
             </ul>
+
+            {/* links  */}
+            <ul className="flex flex-col gap-6 text-gray-600 justify-evenly">
+              <li className="text-2xl md:text-2xl font-semibold text-black">
+                Links
+              </li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About us</Link>
+              </li>
+              <li>
+                <Link to="/terms">Terms of services</Link>
+              </li>
+              <li>
+                <Link to="/privacy">Privacy policy</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="w-full flex flex-row justify-around">
+            {/* services  */}
+            <ul className="flex flex-col gap-6 text-gray-600 justify-evenly">
+              <li className="text-2xl md:text-2xl font-semibold text-black">
+                Services
+              </li>
+              <li>
+                <Link to="/teams">Teams</Link>
+              </li>
+              <li>
+                <Link to="/hackathons">Hackathons</Link>
+              </li>
+              <li>
+                <Link to="/eduq">EduQ</Link>
+              </li>
+              <li>
+                <Link to="/technika">Technika</Link>
+              </li>
+            </ul>
+
             {/* help*/}
-            <ul>
-              <li>
-                <h3 className="text-xl md:text-2xl font-semibold py-6">Help</h3>
+            <ul className="flex flex-col gap-6 text-gray-600 justify-evenly">
+              <li className="text-2xl md:text-2xl font-semibold text-black">
+                Help
               </li>
-              <li>Support</li>
-              <li>FAQs</li>
-              <li>Collections</li>
+              <li>
+                <Link to="/support">Support</Link>
+              </li>
+              <li>
+                <Link to="/faq">FAQs</Link>
+              </li>
+              <li>
+                <Link to="/collections">Collections</Link>
+              </li>
             </ul>
-      
           </div>
         </div>
       </footer>
