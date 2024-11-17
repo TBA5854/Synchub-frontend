@@ -90,13 +90,13 @@ const Home = () => {
         <h2 className="text-3xl md:text-5xl font-semibold">
           FEATURES <span className="text-base">to get started with!</span>
         </h2>
-        <div className='min-h-[50vh] min-w-full bg-[url("/images/lightBgmob.png")] md:bg-[url("/images/lightBg.png")] bg-contain bg-no-repeat mt-12 pt-4 md:pt-12'>
+        <div className='min-w-full bg-[url("/images/lightBgmob.png")] md:bg-[url("/images/lightBg.png")] bg-contain bg-no-repeat mt-12 pt-4 md:pt-12'>
           <h3 className="text-2xl md:text-4xl">LIGHT UP YOUR CODE</h3>
           <div className="flex flex-col lg:flex-row justify-center pt-4 md:pt-20">
             {/* text area  */}
-            <div className="flex flex-col justify-between lg:px-24 ">
-              <div className="text-left p-2 md:p-0">
-                <h3 className="text-3xl md:text-5xl font-bold w-2/3 md:leading-normal">
+            <div className="flex min-h-screen md:min-h-[140vh] flex-col justify-between lg:px-24 ">
+              <div className="text-left p-2 md:p-6">
+                <h3 className="text-3xl md:text-5xl font-bold w-3/4 md:leading-normal">
                   <span className="text-cyan-400">Personalised</span> coding
                   platform for teams
                 </h3>
@@ -120,7 +120,7 @@ const Home = () => {
             </div>
 
             {/* coding image  */}
-            <div className="min-w-[50vw] flex justify-end">
+            <div className="min-w-[50vw] h-[120vh] flex justify-end">
               <img src={coding} alt="coding image" />
             </div>
           </div>
@@ -128,18 +128,18 @@ const Home = () => {
       </section>
 
       {/* hackathon section  */}
-      <section className="w-full flex flex-row flex-wrap-reverse justify-evenly items-center md:py-10 gap-20 md:gap-0">
+      <section className="w-full flex flex-row flex-wrap-reverse justify-evenly items-end py-4 md:py-24 gap-20 md:gap-0">
         {/* left side  */}
-        <div className="text-center border-2 border-purple-900 py-12 px-2 md:p-12 relative">
-          <div className="relative bottom-20">
+        <div className="md:h-[75vh] text-center border-2 border-purple-900 rounded-2xl py-12 px-2 md:pt-12 md:px-16 relative">
+          <div className="relative bottom-20 lg:bottom-40">
             <img src={person} alt="person image" />
           </div>
-          <div className="text-2xl font-medium md:text-4xl pb-4">
+          <div className="text-2xl font-medium md:text-5xl pb-4 relative bottom-20">
             Ready to excel in
             <div>Hack?</div>
           </div>
-          <span className="text-gray-400">You are just one click away</span>
-          <div className="text-xl p-4 flex flex-row justify-center gap-6">
+          <span className="text-gray-400 relative bottom-20 text-xl">You are just one click away</span>
+          <div className="text-xl pt-8 flex flex-row justify-center gap-6 relative bottom-20">
             <button className="bg-[rgb(117,60,234)] py-1 px-6 rounded-3xl">
               Participate
             </button>
@@ -150,7 +150,7 @@ const Home = () => {
         </div>
 
         {/* right side  */}
-        <div className="md:w-[30vw] text-center">
+        <div className="md:w-[30vw] pt-16 text-center md:text-left">
           <h3 className="text-3xl md:text-5xl font-bold leading-normal pb-6">
             AI Powered <span className="text-cyan-400">Hackathons</span>
           </h3>
