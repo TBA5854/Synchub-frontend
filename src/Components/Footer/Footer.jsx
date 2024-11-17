@@ -16,10 +16,10 @@ const Footer = () => {
         </div>
 
         {/*lower- content  */}
-        <div className="w-full flex flex-row md:text-xl flex-wrap py-6 gap-8 md:flex-nowrap md:gap-0">
+        <div className="w-full flex flex-row md:text-xl flex-wrap py-6 gap-12 md:flex-nowrap md:gap-0">
           <div className="w-full flex flex-row justify-around">
             {/* Contact List */}
-            <ul className="flex flex-col gap-6 text-gray-600 justify-evenly">
+            <ul className="flex flex-col gap-6 text-gray-600 justify-evenly min-w-[30vw] md:min-w-0">
               <li className="text-2xl md:text-2xl font-semibold text-black">
                 Contact
               </li>
@@ -34,7 +34,7 @@ const Footer = () => {
             </ul>
 
             {/* links  */}
-            <ul className="flex flex-col gap-6 text-gray-600 justify-evenly">
+            <ul className="flex flex-col gap-6 text-gray-600 justify-evenly min-w-[30vw] md:min-w-0">
               <li className="text-2xl md:text-2xl font-semibold text-black">
                 Links
               </li>
@@ -55,7 +55,7 @@ const Footer = () => {
 
           <div className="w-full flex flex-row justify-around">
             {/* services  */}
-            <ul className="flex flex-col gap-6 text-gray-600 justify-evenly">
+            <ul className="flex flex-col gap-6 text-gray-600 justify-evenly min-w-[30vw] md:min-w-0">
               <li className="text-2xl md:text-2xl font-semibold text-black">
                 Services
               </li>
@@ -74,7 +74,7 @@ const Footer = () => {
             </ul>
 
             {/* help*/}
-            <ul className="flex flex-col gap-6 text-gray-600 justify-evenly">
+            <ul className="flex flex-col gap-6 text-gray-600 justify-evenly min-w-[30vw] md:min-w-0">
               <li className="text-2xl md:text-2xl font-semibold text-black">
                 Help
               </li>
