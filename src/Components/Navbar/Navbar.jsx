@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../../public/logo.png";
 import Hamburger from "hamburger-react";
+const logo = "./logo.png";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -9,15 +9,10 @@ const Navbar = () => {
   return (
     <>
       <div className="w-full h-[10vh] flex flex-row justify-between items-center content-center text-base p-3 md:px-12 md:py-16 text-white lg:text-xl bg-transparent absolute">
-
         {/* left - logo for desktop */}
         <div className="md:w-[10vw] hidden md:block">
           <Link to="/">
-            <img
-              src={logo}
-              alt="synchub logo"
-              className="w-8 md:w-auto"
-            />
+            <img src={logo} alt="synchub logo" className="w-8 md:w-auto" />
           </Link>
         </div>
 
@@ -139,10 +134,9 @@ const Navbar = () => {
         {/* center - logo for mobile*/}
         <div className="md:hidden">
           <Link to="/">
-            <img src={logo} alt="synchub logo" className="w-8 md:w-full"/>
+            <img src={logo} alt="synchub logo" className="w-8 md:w-full" />
           </Link>
         </div>
-
 
         {/* right - login button */}
         <div className="md:text-xl md:w-[10vw]">
