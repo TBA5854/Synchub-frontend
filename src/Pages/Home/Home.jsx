@@ -130,7 +130,7 @@ const Home = () => {
       {/* hackathon section  */}
       <section className="w-full flex flex-row flex-wrap-reverse justify-evenly items-end py-4 md:py-24 gap-20 md:gap-0">
         {/* left side  */}
-        <div className="md:h-[75vh] text-center border-2 border-purple-900 rounded-2xl py-12 px-2 md:pt-12 md:px-16 relative">
+        <div className="md:h-[560px] text-center border-2 border-purple-900 rounded-2xl py-12 px-2 md:pt-12 md:px-16 relative">
           <div className="relative bottom-20 lg:bottom-40">
             <img src={person} alt="person image" />
           </div>
