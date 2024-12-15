@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import invite from "../../assets/images/invite.png";
 import coding from "../../assets/images/coding.png";
@@ -23,6 +23,11 @@ import { useToast } from "@/hooks/use-toast";
 const Home = () => {
   const { toast } = useToast();
   const [email, setemail] = useState("");
+  const scroll = useRef(null);
+
+  const scrollToWaitlist = () => {
+    scroll.current.scrollIntoView({ behavior: 'smooth' });
+  };
   const handleWaitlist = async (e) => {
     e.preventDefault();
     toast({
@@ -108,7 +113,8 @@ const Home = () => {
             Innovation
           </span>
         </h1>
-        <button className="bg-[rgb(117,60,234)] text-2xl px-20 py-2 rounded-3xl mt-16">
+        <button className="bg-[rgb(117,60,234)] text-2xl px-20 py-2 rounded-3xl mt-16"
+        onClick={scrollToWaitlist}>
           Get Started
         </button>
       </main>
@@ -287,7 +293,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
+      <section ref={scroll}>
         <div className="waitlist-container">
           <h2>Join Our Waitlist</h2>
           <form className="input-container" onSubmit={handleWaitlist}>
