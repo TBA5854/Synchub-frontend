@@ -11,38 +11,38 @@
 .content-header > h3 {
   font-size: xx-large;
   font-weight: 500;
-  color: #42A9C0;
+  color: #42a9c0;
 }
 
 .video-container {
-    display: flex;
-    overflow-x: auto; /* Enables horizontal scrolling */
-    padding: 10px;
-    gap: 1rem;
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  padding: 10px;
+  gap: 1rem;
 }
 
 .video {
-    transition: transform 0.3s ease;
-    border-radius: 20px;
-    min-width: 150px;
-    height: 60%;
+  transition: transform 0.3s ease;
+  border-radius: 20px;
+  min-width: 150px;
+  height: 60%;
 }
 
 /* Full video style */
 .video.full {
-    width: 20%;
-    opacity: 1;
+  width: 20%;
+  opacity: 1;
 }
 
 /* Small video style */
 .video.small {
-    width: 20%;
-    opacity: 0.7;
+  width: 20%;
+  opacity: 0.7;
 }
 
 /* When the video is offscreen, use transform to slide */
 .video.offscreen {
-    transform: translateX(-100%); /* Moves the video offscreen to the left */
+  transform: translateX(-100%); /* Moves the video offscreen to the left */
 }
 
 .video-container:hover .video.small:hover {
@@ -51,331 +51,345 @@
 }
 
 .synchubb-container {
-    padding: 2rem;
-    text-align: center;
+  padding: 2rem;
+  text-align: center;
 }
-  
+
 .main-heading {
-    font-size: 3rem;
-    color: white;
-    margin-bottom: 2rem;
-    border: 20px;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 2rem;
+  border: 20px;
 }
-  
+
 .highlight {
-    color: #4a90e2;
+  color: #4a90e2;
 }
 
 .carousel {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    justify-content: center;
-    align-items: flex-start; /* Align carousel items at the top */
-    gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
 }
 
 .section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align section content to the start */
-    min-width: 300px;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    background: linear-gradient(231.21deg, rgba(3, 3, 3, 0.39) 5.92%, rgba(30, 96, 208, 0.39) 94.08%);
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content in each section */
+  justify-content: center;
+  width: 100%;
+  max-width: 450px;
+  max-height: 600px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  background: linear-gradient(
+    231.21deg,
+    rgba(3, 3, 3, 0.39) 5.92%,
+    rgba(30, 96, 208, 0.39) 94.08%
+  );
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0;
+  position: absolute;
 }
 
 .inactive {
-    opacity: 0.4;
-    transform: scale(0.8);
-    filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .active {
-    transform: scale(1);
-    opacity: 1;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
 }
 
 .section-heading {
-    font-size: 1.5rem;
-    background-color: transparent;
-    color: #4a90e2;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: #4a90e2;
+  margin-bottom: 1rem;
 }
 
 .section-text {
-    font-size: 1rem;
-    align-items: flex-start; /* Align text content to the start */
-    color: #F1F0F1;
-    background-color: transparent;
-    max-width: 250px;
-    margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #f1f0f1;
+  background-color: transparent;
+  max-width: 250px;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .learn-more-button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: transparent;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .learn-more-button:hover {
-    background-color: #357ab9;
+  background-color: #357ab9;
 }
 
 .section-image {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
-    margin-top: 1rem;
-    background-color: transparent;
-    opacity: 1;
+  width: 90%;
+  border-radius: 8px;
+  margin-top: 1rem;
+  background-color: transparent;
+  opacity: 1;
 }
 
 .indicator-dots {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .dot {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 20px;
-    background-color: #ccc;
-    transition: width 0.3s;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 20px;
+  background-color: #ccc;
+  transition: width 0.3s;
 }
 
 .active-dot {
-    width: 2.5cm;
-    background-color: white;
+  width: 1cm;
+  background-color: white;
 }
 
 .integration-section {
-    margin-block: 4rem;
-    text-align: center;
+  margin-block: 4rem;
+  text-align: center;
 }
-  
+
 .integration-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
-  
+
 .integration-subheading {
-    font-size: 1rem;
-    font-weight: 300;
-    max-width: 600px;
-    margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .image-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 1rem;
-    gap: 1rem;
-    border: none;
-    border-radius: 20px;
-    background-color: #1a1a1a;
-    margin-bottom: 14rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem;
+  gap: 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #1a1a1a;
+  margin-bottom: 14rem;
 }
-  
+
 .image-item {
-    max-width: 200px;
-    border-radius: 8px;
-    background-color: white;
-    padding: 0.5rem;
+  max-width: 200px;
+  border-radius: 8px;
+  background-color: white;
+  padding: 0.5rem;
 }
-  
+
 /* Connect Container */
 .connect-container {
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-    color: #ffffff;
-    flex-wrap: wrap; /* Allow wrap for smaller screens */
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  color: #ffffff;
+  flex-wrap: wrap; /* Allow wrap for smaller screens */
 }
 
 /* Text Section */
 .text-section {
-    flex: 1;
-    padding-right: 2rem;
+  flex: 1;
+  padding-right: 2rem;
 }
 
 /* Badge */
 .badge {
-    background-color: #e5e5e5;
-    color: #000;
-    font-weight: bold;
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
-    display: inline-block;
-    margin-bottom: 1rem;
+  background-color: #e5e5e5;
+  color: #000;
+  font-weight: bold;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 /* Heading */
 .text-section h1 {
-    font-size: xxx-large;
-    margin-bottom: 1rem;
-    max-width: 400px;
-    padding: 0;
-    margin: 0;
+  font-size: xxx-large;
+  margin-bottom: 1rem;
+  max-width: 400px;
+  padding: 0;
+  margin: 0;
 }
 
 /* Highlighted Text */
 .text-section .highlight {
-    color: #00aaff;
+  color: #00aaff;
 }
 
 /* Paragraph Styling */
 .text-section p {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.5;
-    max-width: 400px;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 400px;
 }
 
 /* Image Section */
 .image-section {
-    flex: 1;
-    text-align: center;
-    background-color: #1a1a1a;
-    padding: 4rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    border: 2px solid #cc00ff;
-    position: relative;
-    overflow: visible;
-    margin: 1rem 0;
+  text-align: center;
+  width: 500px;
+  height: fit-content;
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 2px solid #cc00ff;
+  position: relative;
+  overflow: visible;
 }
 
 .image {
-    position: absolute;
-    top: -50%; /* Fixed positioning */
-    transform: translate(-50%, 0);
-    width: 70%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 8px;
+  position: absolute;
+  top: 0; /* Place image at the top of the border */
+  left: 50%; /* Center the image horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Move image up to overlap with the border */
+  width: 70%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
 }
 
 /* Image Section Heading */
 .image-section h2 {
-    padding-top: 6rem;
-    font-size: xxx-large;
-    font-weight: 500;
+  padding-top: 6rem;
+  font-size: xxx-large;
+  font-weight: 500;
 }
 
 /* Demo Button */
 .demo-button {
-    background: linear-gradient(90deg, #9EC4F1 0%, #B0AEAE 100%);
-    color: #000;
-    font-size: medium;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background: linear-gradient(90deg, #9ec4f1 0%, #b0aeae 100%);
+  color: #000;
+  font-size: medium;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .demo-button:hover {
-    background-color: #a0a0a0;
+  background-color: #a0a0a0;
 }
 
 /* Mobile Screen Layout (Flex Column) */
 @media (max-width: 768px) {
-    .connect-container {
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 0; 
-    }
+  .connect-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
 
-    .image {
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: translate(0, 0);
-        width: 100%;
-    }
+  .image-section {
+    margin-top: 120px;
+    padding-top: 120px;
+    text-align: center;
+  }
 
-    .image-section h2 {
-        padding: 0;
-    }
+  .image {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Reduce image width to 80% for smaller screens */
+    max-width: 300px; /* Ensure it doesn't exceed 300px */
+  }
 
-    .text-section {
-        padding-right: 0;
-        text-align: center; /* Center text for mobile screens */
-    }
+  .image-section h2 {
+    padding: 0;
+  }
 
-    .image-section {
-        margin-top: 2rem;
-        text-align: center;
-    }
+  .text-section {
+    padding-right: 0;
+    text-align: center; /* Center text for mobile screens */
+  }
 }
-
 
 .waitlist-container {
-    text-align: center;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
 }
-  
+
 .waitlist-container h2 {
-    font-size: 2rem;
-    color: #ffffff;
-    margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
 }
-  
+
 .input-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    background: #ffffff;
-    overflow: hidden;
-    max-width: 500px;
-    padding: 15px 10px;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background: #ffffff;
+  overflow: hidden;
+  max-width: 500px;
+  padding: 15px 10px;
+  width: 100%;
 }
-  
+
 .input-container input {
-    border: none;
-    outline: none;
-    padding: 0.8rem;
-    font-size: 1rem;
-    background: #f4f4f4;
-    color: #aaa;
-    flex: 1;
-    border-radius: 50px;
+  border: none;
+  outline: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background: #f4f4f4;
+  color: #aaa;
+  flex: 1;
+  border-radius: 50px;
 }
-  
+
 .input-container button {
-    background: #000000;
-    color: #ffffff;
-    border: none;
-    outline: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
-  
+
 .input-container button:hover {
-    background: #333333;
+  background: #333333;
 }
