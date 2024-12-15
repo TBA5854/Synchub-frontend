@@ -138,7 +138,9 @@ const Home = () => {
             Ready to excel in
             <div>Hack?</div>
           </div>
-          <span className="text-gray-400 relative bottom-20 text-xl">You are just one click away</span>
+          <span className="text-gray-400 relative bottom-20 text-xl">
+            You are just one click away
+          </span>
           <div className="text-xl pt-8 flex flex-row justify-center gap-6 relative bottom-20">
             <button className="bg-[rgb(117,60,234)] py-1 px-6 rounded-3xl">
               Participate
@@ -217,40 +219,38 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-        <div className="synchubb-container">
-          <h3 className="main-heading">
-            SyncHubb is a <span className="highlight">place to</span>
-          </h3>
+      <section className="synchubb-container">
+        <h3 className="main-heading">
+          SyncHubb is a <span className="highlight">place to</span>
+        </h3>
 
-          <div className="carousel">
-            {sections.map((section, index) => (
-              <div
-                key={index}
-                className={`section ${
-                  index === activeIndex ? "active" : "inactive"
-                }`}
-              >
-                <h4 className="section-heading">{section.title}</h4>
-                <p className="section-text">{section.text}</p>
-                <button className="learn-more-button">Learn more →</button>
-                <img
-                  src={section.img}
-                  alt={section.title}
-                  className="section-image"
-                />
-              </div>
-            ))}
-          </div>
+        <div className="carousel">
+          {sections.map((section, index) => (
+            <div
+              key={index}
+              className={`section ${
+                index === activeIndex ? "active" : "inactive"
+              }`}
+            >
+              <h4 className="section-heading">{section.title}</h4>
+              <p className="section-text">{section.text}</p>
+              <button className="learn-more-button">Learn more →</button>
+              <img
+                src={section.img}
+                alt={section.title}
+                className="section-image"
+              />
+            </div>
+          ))}
+        </div>
 
-          <div className="indicator-dots">
-            {sections.map((_, index) => (
-              <span
-                key={index}
-                className={`dot ${index === activeIndex ? "active-dot" : ""}`}
-              ></span>
-            ))}
-          </div>
+        <div className="indicator-dots">
+          {sections.map((_, index) => (
+            <span
+              key={index}
+              className={`dot ${index === activeIndex ? "active-dot" : ""}`}
+            ></span>
+          ))}
         </div>
       </section>
 
