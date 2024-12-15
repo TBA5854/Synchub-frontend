@@ -377,7 +377,7 @@
   border-radius: 50px;
 }
 
-.input-container button {
+.input-container input[type="submit"] {
   background: #000000;
   color: #ffffff;
   border: none;
