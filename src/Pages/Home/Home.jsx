@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import invite from "../../assets/images/invite.png";
 import coding from "../../assets/images/coding.png";
@@ -17,8 +17,46 @@ import video3 from "../../assets/images/video3.jpg";
 import video4 from "../../assets/images/video4.jpg";
 import video5 from "../../assets/images/video5.jpg";
 import { StretchHorizontal, Trophy, Users, Video } from "lucide-react";
+import axios from "axios";
+import { useToast } from "@/hooks/use-toast";
 
 const Home = () => {
+  const { toast } = useToast();
+  const [email, setemail] = useState("");
+  const scroll = useRef(null);
+
+  const scrollToWaitlist = () => {
+    scroll.current.scrollIntoView({ behavior: 'smooth' });
+  };
+  const handleWaitlist = async (e) => {
+    e.preventDefault();
+    toast({
+      description: "Please wait...",
+    });
+    try {
+      const res = await axios.post(
+        "https://waitlistingbackend.onrender.com/subscribe",
+        { email }
+      );
+      if (res.status === 200) {
+        toast({
+          description: res.data.message,
+        });
+        setemail("");
+      } else {
+        toast({
+          variant: "destructive",
+          description: res.error,
+        });
+      }
+    } catch (err) {
+      toast({
+        variant: "destructive",
+        description:
+          err.response?.data?.message || "An error occurred. Please try again.",
+      });
+    }
+  };
   const cardData = [
     {
       icon: <Video />,
@@ -75,7 +113,8 @@ const Home = () => {
             Innovation
           </span>
         </h1>
-        <button className="bg-[rgb(117,60,234)] text-2xl px-20 py-2 rounded-3xl mt-16">
+        <button className="bg-[rgb(117,60,234)] text-2xl px-20 py-2 rounded-3xl mt-16"
+        onClick={scrollToWaitlist}>
           Get Started
         </button>
       </main>
@@ -254,13 +293,18 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
+      <section ref={scroll}>
         <div className="waitlist-container">
           <h2>Join Our Waitlist</h2>
-          <div className="input-container">
-            <input type="email" placeholder="Enter your mail address" />
-            <button type="submit">Submit</button>
-          </div>
+          <form className="input-container" onSubmit={handleWaitlist}>
+            <input
+              type="email"
+              placeholder="Enter your mail address"
+              value={email}
+              onChange={(e) => setemail(e.target.value)}
+            />
+            <input type="submit" value="Submit" />
+          </form>
         </div>
       </section>
     </div>
