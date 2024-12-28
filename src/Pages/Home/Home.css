@@ -16,6 +16,8 @@
 
 .video-container {
   display: flex;
+  flex-flow: row;
+  flex-wrap:wrap;
   overflow-x: auto; /* Enables horizontal scrolling */
   padding: 10px;
   gap: 1rem;
@@ -314,6 +316,7 @@
   }
 
   .image-section {
+    width: auto;
     margin-top: 120px;
     padding-top: 120px;
     text-align: center;
@@ -326,6 +329,9 @@
     transform: translate(-50%, -50%);
     width: 80%; /* Reduce image width to 80% for smaller screens */
     max-width: 300px; /* Ensure it doesn't exceed 300px */
+  }
+  .image-row {
+    margin-bottom: 4rem;
   }
 
   .image-section h2 {

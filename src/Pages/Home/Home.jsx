@@ -125,7 +125,7 @@ const Home = () => {
       </section>
 
       {/* features section  */}
-      <section className="min-h-screen min-w-full text-center py-32">
+      <section className="min-h-screen min-w-full text-center pt-32 pb-8 md:py-32">
         <h2 className="text-3xl md:text-5xl font-semibold">
           FEATURES <span className="text-base">to get started with!</span>
         </h2>
@@ -159,8 +159,8 @@ const Home = () => {
             </div>
 
             {/* coding image  */}
-            <div className="min-w-[50vw] h-[120vh] flex justify-end">
-              <img src={coding} alt="coding image" />
+            <div className="min-w-[50vw] h-[65vh] md:h-[120vh] flex justify-end">
+              <img src={coding} alt="coding image"/>
             </div>
           </div>
         </div>
