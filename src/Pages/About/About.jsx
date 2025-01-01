@@ -76,7 +76,7 @@ const About = () => {
         <div className="title-container">
           <h1 className="title">What We’re Doing Here</h1>
           <p className="title-description">
-            Synchub is an integrated social networking platform that connects
+            Synchubb is an integrated social networking platform that connects
             students, professionals and innovators to collaborate on real world
             project with its user driven approach
           </p>
