@@ -19,15 +19,13 @@ import video5 from "../../assets/images/video5.jpg";
 import { StretchHorizontal, Trophy, Users, Video } from "lucide-react";
 import axios from "axios";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { toast } = useToast();
   const [email, setemail] = useState("");
   const scroll = useRef(null);
 
-  const scrollToWaitlist = () => {
-    scroll.current.scrollIntoView({ behavior: 'smooth' });
-  };
   const handleWaitlist = async (e) => {
     e.preventDefault();
     toast({
@@ -113,10 +111,9 @@ const Home = () => {
             Innovation
           </span>
         </h1>
-        <button className="bg-[rgb(117,60,234)] text-2xl px-20 py-2 rounded-3xl mt-16"
-        onClick={scrollToWaitlist}>
+        <Link to={"main"} className="bg-[rgb(117,60,234)] text-2xl px-20 py-2 rounded-3xl mt-16">
           Get Started
-        </button>
+        </Link>
       </main>
 
       {/* invite section  */}

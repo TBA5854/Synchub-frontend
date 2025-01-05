@@ -8,7 +8,7 @@ const Footer = () => {
         {/*upper- logo+name  */}
         <div className="flex flex-row justify-center items-center gap-10">
           <img src={logo} alt="logo img" />
-          <h2 className="text-6xl font-semibold">
+          <h2 className="text-6xl font-semibold text-black">
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               SyncHub
             </Link>
